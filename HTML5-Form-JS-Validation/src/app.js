@@ -24,14 +24,14 @@ window.onload = () => {
 };
 
 const isValidText = inputElement => {
-  inputElement.addEventListener("focusout", event => {
+  inputElement.addEventListener("input", event => {
     checkOnlyText(inputElement.value)
       ? validInputStyle(inputElement)
       : invalidInputStyle(inputElement);
   });
 };
 const isValidNumber = inputElement => {
-  inputElement.addEventListener("focusout", event => {
+  inputElement.addEventListener("input", event => {
     checkOnlyNumber(inputElement.value)
       ? validInputStyle(inputElement)
       : invalidInputStyle(inputElement);
