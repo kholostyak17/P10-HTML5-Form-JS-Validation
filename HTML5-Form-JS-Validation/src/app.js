@@ -1,3 +1,8 @@
+/* eslint-disable */
+import "bootstrap";
+import "./style.css";
+
+
 const CARD = document.querySelector("#inputCard")
 const CVC = document.querySelector("#inputCVC")
 const AMOUNT = document.querySelector("#inputAmount")
