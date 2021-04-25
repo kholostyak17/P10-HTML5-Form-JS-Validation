@@ -2,6 +2,8 @@
 import "bootstrap";
 import "./style.css";
 
+//en primer lugar guardo direcciones de selectores de id en constantes
+
 const CARD = document.querySelector("#inputCard");
 const CVC = document.querySelector("#inputCVC");
 const AMOUNT = document.querySelector("#inputAmount");
@@ -11,6 +13,8 @@ const CITY = document.querySelector("#inputCity");
 const STATE = document.querySelector("#inputState");
 const POSTALCODE = document.querySelector("#inputPostalCode");
 
+//en la funcion principal llamo a las funciones que validan los campos
+//y a la que se encarga de definir el comportamiento del boton send
 window.onload = () => {
   sendButton();
   isValidNumber(CARD);
@@ -23,6 +27,8 @@ window.onload = () => {
   isValidNumber(POSTALCODE);
 };
 
+//estas funciones se encargan de validar si el valor cumple con el tipo texto
+//o el tipo numérico respectivamente
 const isValidText = inputElement => {
   inputElement.addEventListener("input", event => {
     checkOnlyText(inputElement.value)
@@ -38,6 +44,8 @@ const isValidNumber = inputElement => {
   });
 };
 
+//estas son las encargadas de dar estilo a los campos cuando el valor
+//cumple el formato o cuando no se cumple
 const invalidInputStyle = input => {
   input.style.background = "";
   input.classList.remove("is-valid");
@@ -49,6 +57,7 @@ const validInputStyle = input => {
   input.classList.add("is-valid");
 };
 
+//aquí se comprueba si los valores cumplen con los de las expresiones regulares
 const checkOnlyText = text => {
   return /^[a-zA-Z ]+$/.test(text);
 };
@@ -56,6 +65,10 @@ const checkOnlyNumber = text => {
   return /^[0-9 ]+$/.test(text);
 };
 
+//esta funcion es la encargada de hacer que el boton send no recargue la página,
+//crea una alerta en cuanto uno de los campos se encuentre vacío,
+//borra la alerta si todos los campos ya estan rellenos,
+//y resalta con el fondo en rojo los que se encuentran vacíos
 const sendButton = () => {
   document.querySelector("#inputSend").addEventListener("click", event => {
     event.preventDefault();
