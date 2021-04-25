@@ -26,16 +26,16 @@
                         <div class="row form-row my-2">
                             <div class="form-group col-5">
                                 <label for="inputCard">Card #</label>
-                                <input class="form-control" type="tel" name="card" placeholder="XXXXXXXXXXXXXXXXX"
+                                <input class="form-control" type="text" name="card" placeholder="XXXXXXXXXXXXXXXXX"
                                     id="inputCard">
                             </div>
                             <div class="form-group col-3">
                                 <label for="inputCvc">CVC #</label>
-                                <input class="form-control" type="tel" name="cvc" placeholder="0000" id="inputCvc">
+                                <input class="form-control" type="text" name="cvc" placeholder="0000" id="inputCvc">
                             </div>
                             <div class="form-group col-4">
                                 <label for="inputAmount"> Amount</label>
-                                <input class="form-control" type="tel" name="Amount" placeholder="Amount"
+                                <input class="form-control" type="text" name="Amount" placeholder="Amount"
                                     id="inputAmount">
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="form-group col-3">
                                     <label for="inputPostalCode">Postal Code</label>
-                                    <input class="form-control" type="tel" name="PostalCode" placeholder="PostalCode"
+                                    <input class="form-control" type="text" name="PostalCode" placeholder="PostalCode"
                                         id="inputPostalCode">
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-end">
-                        <button type="button" class="btn btn-secondary m-1">Cancel</button>
+                        <button type="button" class="btn btn-secondary m-1" role="link" onclick="window.location='./index.html'">Cancel</button>
                         <input class="btn btn-primary m-1" type="submit" value="Send">
                     </div>
                 </form>
